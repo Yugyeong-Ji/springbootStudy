@@ -1,0 +1,34 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }//ext란? build.gradle에서 사용하는 전역변수 선언
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }//spring-boot-gradle-plugin의 버전을 springBootVersion의 값으로 받음
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'//스프링부트의 의존성들을 관리해주는 플러그인
+
+repositories {
+    mavenCentral()
+}
+
+group 'com.jojoldu.book'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
