@@ -30,6 +30,10 @@ repositories {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
+    annotationProcessor("org.projectlombok:lombok")
     implementation('org.projectlombok:lombok')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
+//gradle version 에러의 경우에는 Gradle Wrapper를 이용하여 프로젝트 빌드환경 관리 가능
+//다른 gradle version이 설치된 경우에도 문제없이 작동할 수 있어서 협업 시에 유익함
+//
