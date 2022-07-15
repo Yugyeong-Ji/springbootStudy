@@ -1,4 +1,4 @@
-package posts;
+package domain.posts;
 
 import lombok.Builder;
 import lombok.Getter;
